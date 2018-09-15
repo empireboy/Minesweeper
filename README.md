@@ -6,6 +6,7 @@ This is made by me, Casper Meloen from The Netherlands.
 
 # Download
 Press the download button at the top right of the screen to download the latest version.
+
 https://bit.ly/2xk46tE
 
 # What did I work on?
@@ -29,8 +30,11 @@ I got it to work very fast because of my design architecture.
 
 # What if I had more time?
 I would make a better UI experience where you can customize the Minesweeper playground.
+
 I would make a winning reward after you found every mine.
+
 I would make a flag counter that counts down on how many flags you have left.
+
 I would make a timer that counts how long you are playing.
 
 # My Portfolio
