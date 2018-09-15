@@ -5,7 +5,8 @@ I hope you know Minesweeper! Its an interesting puzzle game. This was an great c
 This is made by me, Casper Meloen from The Netherlands.
 
 # Download
-https://www.dropbox.com/s/uxzvx2kv3cogy7y/Minesweeper%20V2.7z?dl=0
+Press the download button at the top right of the screen to download the latest version.
+https://bit.ly/2xk46tE
 
 # What did I work on?
 I used a design pattern called Model-View-Controller.
