@@ -43,14 +43,14 @@ namespace Minesweeper
 			if (mouseButton == 0)
 			{
 				if (tile.GetComponent<Image>().sprite != _flagTileSprite)
-					MinesweeperGameManager.Instance.RevealTile(tile);
+					transform.root.GetComponentInChildren<MinesweeperGameManager>().RevealTile(tile);
 
 				// Reveal Mines
 				if (tile.GetComponent<MinesweeperTile>().Type == MinesweeperGameManager.TileTypes.Mine)
 				{
 					RevealAllMines();
 					tile.GetComponent<Image>().sprite = _mineSelectedTileSprite;
-					FindObjectOfType<GraphicRaycasterHandler>().enabled = false;
+					transform.root.GetComponentInChildren<GraphicRaycasterHandler>().enabled = false;
 				}
 			}
 			else if (mouseButton == 1)
@@ -101,7 +101,7 @@ namespace Minesweeper
 							nextTile = null;
 					}
 					if (nextTile != null)
-						MinesweeperGameManager.Instance.RevealTile(nextTile);
+						transform.root.GetComponentInChildren<MinesweeperGameManager>().RevealTile(nextTile);
 				}
 			}
 		}
@@ -160,7 +160,7 @@ namespace Minesweeper
 					}
 					else if (currentTile.GetComponent<MinesweeperTile>().Type == MinesweeperGameManager.TileTypes.Mine && currentTile.GetComponent<Image>().sprite != _flagTileSprite)
 					{
-						MinesweeperGameManager.Instance.RevealTile(currentTile);
+						transform.root.GetComponentInChildren<MinesweeperGameManager>().RevealTile(currentTile);
 					}
 				}
 			}

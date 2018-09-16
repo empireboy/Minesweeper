@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61347156368107074}
   - component: {fileID: 114867302944160196}
   m_Layer: 5
-  m_Name: TileView
+  m_Name: MinesweeperTileView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

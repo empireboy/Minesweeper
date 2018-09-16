@@ -5,15 +5,6 @@ namespace Minesweeper
 {
 	public class MinesweeperGameManager : MonoBehaviour
 	{
-		private static MinesweeperGameManager _instance;
-		public static MinesweeperGameManager Instance
-		{
-			get
-			{
-				return _instance;
-			}
-		}
-
 		public enum TileTypes
 		{
 			Empty,
@@ -50,20 +41,14 @@ namespace Minesweeper
 
 		private void Awake()
 		{
-			if (GameObject.FindObjectsOfType<MinesweeperGameManager>().Length > 1)
-				Destroy(gameObject);
-
-			if (_instance == null)
-				_instance = this;
-
 			minesweeperPlayground.Randomize();
 		}
 
 		private void Start()
 		{
-			FindObjectOfType<GraphicRaycasterHandler>().MouseDownEvent += OnTileDown;
-			FindObjectOfType<GraphicRaycasterHandler>().MouseReleasedEvent += OnTileRelease;
-			FindObjectOfType<GraphicRaycasterHandler>().SelectEvent += OnTileSelect;
+			transform.root.GetComponentInChildren<GraphicRaycasterHandler>().MouseDownEvent += OnTileDown;
+			transform.root.GetComponentInChildren<GraphicRaycasterHandler>().MouseReleasedEvent += OnTileRelease;
+			transform.root.GetComponentInChildren<GraphicRaycasterHandler>().SelectEvent += OnTileSelect;
 		}
 
 		private void Update()

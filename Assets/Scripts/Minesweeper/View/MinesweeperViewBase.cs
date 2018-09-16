@@ -29,7 +29,7 @@ namespace Minesweeper
 
 		private void Start()
 		{
-			Init(MinesweeperGameManager.Instance.MinesweeperPlayground);
+			Init(transform.root.GetComponentInChildren<MinesweeperGameManager>().MinesweeperPlayground);
 		}
 
 		public virtual void Init(MinesweeperPlayground minesweeperPlayground)
@@ -46,10 +46,11 @@ namespace Minesweeper
 				}
 			}
 
-			MinesweeperGameManager.Instance.TileDownEvent += OnTileDown;
-			MinesweeperGameManager.Instance.TileReleaseEvent += OnTileRelease;
-			MinesweeperGameManager.Instance.TileSelectEvent += OnTileSelect;
-			MinesweeperGameManager.Instance.TileRevealEvent += OnTileReveal;
+			MinesweeperGameManager minesweeperGameManager = transform.root.GetComponentInChildren<MinesweeperGameManager>();
+			minesweeperGameManager.TileDownEvent += OnTileDown;
+			minesweeperGameManager.TileReleaseEvent += OnTileRelease;
+			minesweeperGameManager.TileSelectEvent += OnTileSelect;
+			minesweeperGameManager.TileRevealEvent += OnTileReveal;
 		}
 
 		public abstract void OnTileDown(GameObject tile, int mouseButton);
